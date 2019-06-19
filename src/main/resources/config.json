@@ -1,0 +1,11 @@
+{
+  "httpSchema": "https",
+  "hostName": "localhost",
+  "port": 9200,
+  "user": "user",
+  "pass": "password",
+  "applicationIndex": "app-idx",
+  "baselineIndex": "baseline-idx",
+  "errorIndex": "err-idx",
+  "userIndex": "useridx"
+}

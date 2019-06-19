@@ -1,0 +1,12 @@
+language: java
+git:
+  quiet: true
+  submodules: false
+branches:
+  only:
+    - master
+before_install:
+  - git submodule add https://github.com/integrated-evaluation-framework/IEvaluate-API.git
+  - cd IEvaluate-API
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - cd ..

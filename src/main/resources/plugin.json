@@ -1,0 +1,5 @@
+{
+  "name": "IEvaluate-ElasticSearch-Plugin",
+  "mainClass": "edu.mayo.dhs.ievaluate.plugins.es.IEvaluateESPlugin",
+  "required": []
+}
