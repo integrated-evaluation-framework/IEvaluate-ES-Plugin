@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.mayo.dhs.ievaluate.api.IEvaluate;
 import edu.mayo.dhs.ievaluate.api.applications.ApplicationProvider;
 import edu.mayo.dhs.ievaluate.api.applications.ProfiledApplication;
+import edu.mayo.dhs.ievaluate.api.models.metrics.MetricDatapoint;
+import edu.mayo.dhs.ievaluate.api.models.tasks.ApplicationTask;
 import edu.mayo.dhs.ievaluate.api.storage.StorageProvider;
 import edu.mayo.dhs.ievaluate.plugins.es.config.ESPluginConfig;
 import edu.mayo.dhs.ievaluate.plugins.es.models.ProfiledApplicationBean;
@@ -169,5 +171,15 @@ public class ESBackedStorageProvider implements StorageProvider {
             work.clear();
             registeredApplications.drainTo(work, 1000);
         }
+    }
+
+    @Override
+    public List<MetricDatapoint> getMetrics(ProfiledApplication application, String metricName, ApplicationTask task, Collection<String> versions) {
+        return null; // TODO
+    }
+
+    @Override
+    public void saveMetrics(ProfiledApplication application, ApplicationTask task, Collection<MetricDatapoint> metrics) {
+        // TODO
     }
 }
